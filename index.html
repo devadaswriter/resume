@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devashish Kumar - Professional Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700;900&display=swap');
+
+        :root {
+            --primary-color: #1e293b; /* Slate 800 */
+            --accent-color: #d4af37; /* Metallic Gold */
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #52525b; /* Dark background for viewing context */
+            color: #334155;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        /* Resume Container - Fixed A4 size */
+        .resume-page {
+            width: 210mm;
+            height: 297mm; /* Fixed A4 Height */
+            background: white;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            padding: 30px 35px; /* Slightly adjusted padding to fit content */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Octagon Image Styling - Premium Look */
+        .octagon-container {
+            width: 135px;
+            height: 135px;
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); /* Gold Gradient */
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .octagon-img {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            background-color: white;
+        }
+
+        .premium-header { font-family: 'Cinzel', serif; }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 3px;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        /* Timeline Styling */
+        .timeline-item {
+            position: relative;
+            padding-left: 18px;
+            border-left: 2px solid #cbd5e1;
+            margin-bottom: 1rem;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px var(--accent-color);
+        }
+
+        /* Stat Box Styling */
+        .stat-box {
+            background: #f8fafc;
+            border-left: 3px solid var(--accent-color);
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .stat-box:hover {
+            background: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateX(2px);
+        }
+
+        /* Compact Text Utilities */
+        p, li { font-size: 0.85rem; line-height: 1.4; }
+        .role-title { font-size: 0.95rem; font-weight: 700; color: #1e293b; }
+        .company-name { font-size: 0.85rem; font-weight: 600; color: #b38728; }
+        .date-badge { font-size: 0.7rem; font-weight: 700; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; color: #64748b; }
+        
+        .reporting-to {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .resume-page { margin: 0; box-shadow: none; width: 100%; height: 100%; padding: 20px; }
+            .stat-box { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-page">
+        <!-- Header -->
+        <header class="flex items-center gap-6 mb-8 border-b border-slate-200 pb-6">
+            <div class="octagon-container shrink-0">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNPV__yhQOBBzX9G8Or0w_cK2SIpyQwA2GHLXpbi7jD7wt-tUY-ebRStp-fURMI3vQ5qXuxCjceilS3LW-Vq78_Ah9nvYhjdbls4X8xUwLo6Ubb-XfCQN3pD6ia4w8ZhXTzj9ih0dxriliFABjlZKrwFUMBgySD7tHyzhT6TTsNsnBBXkky6zQD2Yfmss/s3456/IMG_COM_202512060433422980.webp" 
+                     alt="Devashish Kumar" 
+                     class="octagon-img">
+            </div>
+            <div class="flex-grow">
+                <h1 class="premium-header text-4xl text-slate-800 font-bold tracking-wide">Devashish Kumar</h1>
+                <div class="flex items-center gap-3 my-2 text-[#b38728] font-bold text-sm tracking-wider uppercase">
+                    <span>Tech Writer</span>
+                    <span class="text-slate-300">|</span>
+                    <span>SEO Expert</span>
+                    <span class="text-slate-300">|</span>
+                    <span>Content Strategist</span>
+                </div>
+                <div class="text-xs text-slate-500 flex gap-5 mt-2 font-medium">
+                    <span><i class="fas fa-map-marker-alt mr-1 text-slate-400"></i> India (Remote)</span>
+                    <span><i class="fas fa-envelope mr-1 text-slate-400"></i> devadaswriter@gmail.com</span> 
+                </div>
+                <p class="text-xs text-slate-500 mt-2 leading-relaxed max-w-2xl text-justify">
+                    A tech writer connecting people with innovation. From breaking down smartphone specs to explaining AI trends, I bring clarity to content. I turn complex technical specifications into useful, human-centric stories.
+                </p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-12 gap-8 flex-grow h-full overflow-hidden">
+            
+            <!-- LEFT COLUMN: Experience (Main) -->
+            <div class="col-span-8 pr-2">
+                <section class="mb-6">
+                    <h2 class="section-title"><i class="fas fa-briefcase mr-2"></i> Professional Experience</h2>
+                    
+                    <!-- Smartprix -->
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="role-title">Consumer Technology Writer</div>
+                                <div class="company-name">Smartprix</div>
+                                <span class="reporting-to">Reporting to: <strong>Shikhar Mehrotra</strong> (Consumer Tech Writer)</span>
+                            </div>
+                            <span class="date-badge">Feb 2025 - Present</span>
+                        </div>
+                        <ul class="list-disc ml-4 text-slate-600 mt-1 space-y-1">
+                            <li>Contribute 7-10 SEO-friendly articles monthly on smartphones & AI.</li>
+                            <li>Translate ghostwritten briefs into engaging consumer guides.</li>
+                            <li>Provide audible/informative tech news coverage.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 91mobiles (Saloni) -->
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="role-title">Freelance Tech Writer</div>
+                                <div class="company-name">91mobiles</div>
+                                <span class="reporting-to">Reporting to: <strong>Saloni Tandon</strong> (Associate Editor)</span>
+                            </div>
+                            <span class="date-badge">Sep 2024 - Present</span>
+                        </div>
+                        <ul class="list-disc ml-4 text-slate-600 mt-1 space-y-1">
+                            <li>Writing 10-11 gadget-focused articles monthly (150+ total).</li>
+                            <li>Drafting, SEO optimizing, and submitting via Google Docs.</li>
+                            <li>Ensuring accuracy in technical specifications.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 91mobiles (Kamal) -->
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="role-title">Remote Tech Correspondent</div>
+                                <div class="company-name">91mobiles</div>
+                                <span class="reporting-to">Reporting to: <strong>Kamal Kant</strong> (Senior Correspondent)</span>
+                            </div>
+                            <span class="date-badge">Nov 2022 - Present</span>
+                        </div>
+                        <ul class="list-disc ml-4 text-slate-600 mt-1 space-y-1">
+                            <li>Delivering 3-5 tech articles weekly (470+ total published).</li>
+                            <li>Refining Hindi/English mixed drafts into polished English content.</li>
+                            <li>Specializing in tech journalism & content strategy.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Internships -->
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="role-title">Creative Writer Intern</div>
+                                <div class="company-name">Marpu Foundation & InAmigos</div>
+                            </div>
+                            <span class="date-badge">Nov 2025</span>
+                        </div>
+                        <p class="text-slate-600 mt-1 text-xs">
+                            Created engaging social content & fundraising campaigns for top NGOs.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title"><i class="fas fa-graduation-cap mr-2"></i> Education</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-2.5 rounded border-l-2 border-slate-300">
+                            <div class="font-bold text-slate-800 text-sm">B.Com (IT)</div>
+                            <div class="text-[11px] text-[#b38728] font-bold">Dr. Jagarnath Mishra College</div>
+                            <div class="text-[10px] text-slate-500">2025 - 2028</div>
+                        </div>
+                        <div class="bg-slate-50 p-2.5 rounded border-l-2 border-slate-300">
+                            <div class="font-bold text-slate-800 text-sm">Senior Secondary</div>
+                            <div class="text-[11px] text-[#b38728] font-bold">DPS International</div>
+                            <div class="text-[10px] text-slate-500">Grade: 88.89% (A2)</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: Stats & Skills (Sidebar) -->
+            <div class="col-span-4 flex flex-col gap-4">
+                
+                <!-- NEW HIGHLIGHTS SECTION -->
+                <div class="mb-2">
+                    <h2 class="section-title w-full text-center mb-4">Highlights</h2>
+                    
+                    <div class="stat-box">
+                        <div class="text-2xl font-black text-[#b38728]">3+ YEARS</div>
+                        <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wide">Experience</div>
+                        <div class="text-[10px] text-slate-500">Tech Journalism & SEO</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="text-2xl font-black text-[#b38728]">700+</div>
+                        <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wide">Articles Published</div>
+                        <div class="text-[10px] text-slate-500">Across 91mobiles & Smartprix</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="text-2xl font-black text-[#b38728]">40+</div>
+                        <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wide">Pro Skills</div>
+                        <div class="text-[10px] text-slate-500">Tech, Writing & Design</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <div class="text-2xl font-black text-[#b38728]">100%</div>
+                        <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wide">SEO Optimized</div>
+                        <div class="text-[10px] text-slate-500">AP Style Familiarity</div>
+                    </div>
+                </div>
+
+                <!-- Expertise Tags -->
+                <div>
+                    <h2 class="section-title w-full">Core Skills</h2>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 bg-slate-800 text-white text-[10px] font-bold rounded">Tech Journalism</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">SEO Writing</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Ghostwriting</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Copywriting</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">CMS</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Video Generation</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Logo Design</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Transcription</span>
+                        <span class="px-2 py-1 bg-slate-100 text-[10px] font-bold text-slate-600 rounded border border-slate-200">Data Entry</span>
+                    </div>
+                </div>
+
+                 <!-- Languages -->
+                 <div>
+                    <h2 class="section-title w-full">Languages</h2>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span>English</span> 
+                            <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-[#b38728]">Proficient</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Hindi</span> 
+                            <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-bold text-[#b38728]">Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Links (Sidebar Bottom) -->
+                <div class="mt-auto pt-4 border-t border-slate-200 text-center">
+                    <div class="flex flex-col gap-2">
+                        <a href="https://www.linkedin.com/in/imdevashishdas" class="text-xs font-bold text-slate-600 hover:text-[#b38728] flex items-center justify-center gap-2 py-1.5 bg-slate-50 rounded">
+                            <i class="fab fa-linkedin text-lg"></i> LinkedIn Profile
+                        </a>
+                        <a href="https://devadaswriter.github.io/Portfolio/" class="text-xs font-bold text-slate-600 hover:text-[#b38728] flex items-center justify-center gap-2 py-1.5 bg-slate-50 rounded">
+                            <i class="fas fa-globe text-lg"></i> Online Portfolio
+                        </a>
+                        <a href="https://linktr.ee/imdevashish" class="text-xs font-bold text-slate-600 hover:text-[#b38728] flex items-center justify-center gap-2 py-1.5 bg-slate-50 rounded">
+                            <i class="fas fa-link text-lg"></i> LinkTree
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
